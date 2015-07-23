@@ -46,11 +46,11 @@
         rotate,
         $tabs,
         // Helpers
-        index = 0,
+        index = 0;
 console.log($this);
-        $slide = $this.children(),
+        var $slide = $this.children();
 console.log(slide);
-        length = $slide.size(),
+        var length = $slide.size(),
         fadeTime = parseFloat(settings.speed),
         waitTime = parseFloat(settings.timeout),
         maxw = parseFloat(settings.maxwidth),
