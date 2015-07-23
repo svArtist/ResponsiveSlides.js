@@ -44,8 +44,10 @@
 
         // Helpers
         index = 0,
-        $slide = $this.children(),
-        length = $slide.size(),
+        $slide = $this.children();
+        console.log($slide);
+        console.log($his);
+        var length = $slide.size(),
         fadeTime = parseFloat(settings.speed),
         waitTime = parseFloat(settings.timeout),
         maxw = parseFloat(settings.maxwidth),
