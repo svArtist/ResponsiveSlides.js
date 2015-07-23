@@ -46,7 +46,7 @@
         index = 0,
         $slide = $this.children();
         console.log($slide);
-        console.log($his);
+        console.log($this);
         var length = $slide.size(),
         fadeTime = parseFloat(settings.speed),
         waitTime = parseFloat(settings.timeout),
