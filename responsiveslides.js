@@ -1,13 +1,3 @@
-/*! ResponsiveSlides.js v1.54
- * http://responsiveslides.com
- * http://viljamis.com
- *
- * Copyright (c) 2011-2012 @viljamis
- * Available under the MIT license
- */
-
-/*jslint browser: true, sloppy: true, vars: true, plusplus: true, indent: 2 */
-
 (function ($, window, i) {
   $.fn.responsiveSlides = function (options) {
 
@@ -45,12 +35,11 @@
         restartCycle,
         rotate,
         $tabs,
+
         // Helpers
-        index = 0;
-console.log($this);
-        var $slide = $this.children();
-console.log(slide);
-        var length = $slide.size(),
+        index = 0,
+        $slide = $this.children();
+        var length = $slide.length,
         fadeTime = parseFloat(settings.speed),
         waitTime = parseFloat(settings.timeout),
         maxw = parseFloat(settings.maxwidth),
@@ -69,7 +58,7 @@ console.log(slide);
         $pager = $("<ul class='" + namespace + "_tabs " + namespaceIdx + "_tabs' />"),
 
         // Styles for visible and hidden slides
-        visible = {"float": "left", "position": "relative", "opacity": 1, "zIndex": 2},
+        visible = {"float": "left", "position": "relative", "opacity": 1, "zIndex": 2, "display":"block"},
         hidden = {"float": "none", "position": "absolute", "opacity": 0, "zIndex": 1},
 
         // Detect transition support
@@ -172,7 +161,7 @@ console.log(slide);
       }
 
       // Only run if there's more than one slide
-      if ($slide.size() > 1) {
+      if ($slide.length > 1) {
 
         // Make sure the timeout is at least 100ms longer than the fade
         if (waitTime < fadeTime + 100) {
